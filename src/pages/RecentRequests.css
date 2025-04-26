@@ -1,0 +1,175 @@
+/* RecentRequests.css */
+.requests-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .requests-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .requests-header h1 {
+    color: #e63946;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .requests-header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .loading-spinner,
+  .error-alert,
+  .no-requests {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+  }
+  
+  .request-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .patient-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .patient-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.3rem;
+  }
+  
+  .urgency-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .detail-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  
+  .detail-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .icon {
+    color: #e63946;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #555;
+    margin-right: 5px;
+  }
+  
+  .detail-value {
+    color: #333;
+  }
+  
+  .card-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .respond-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .respond-btn:hover {
+    background: #c1121f;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .requests-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .requests-header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .requests-container {
+      padding: 15px;
+    }
+    
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .patient-info h3 {
+      font-size: 1.2rem;
+    }
+    
+    .requests-header h1 {
+      font-size: 1.8rem;
+    }
+  }
