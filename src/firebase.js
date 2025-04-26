@@ -1,23 +1,18 @@
-// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-// import { db } from './firebase'; // or wherever your firebase config is
 
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA2GcpE0jM6a6EWw4YlVH6gFiWgRSlWbP0",
-  authDomain: "blood-donation-23556.firebaseapp.com",
-  projectId: "blood-donation-23556",
-  storageBucket: "blood-donation-23556.firebasestorage.app",
-  messagingSenderId: "444827597662",
-  appId: "1:444827597662:web:3e14ee6d79a4752ac0adcf"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
-export { db };
-export const auth = getAuth(app);
+export { db, auth };

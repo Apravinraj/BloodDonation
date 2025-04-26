@@ -5,10 +5,9 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 import FindDonors from './pages/FindDonors'
 import Request from './pages/Request'
-import AuthForm from './pages/AuthForm'
 import RecentRequests from './pages/RecentRequests'
-import Profile from './pages/Profile'
-// Create this component for 404 pages
+import FindCenter from './pages/FindCenter'
+
 
 const App = () => {
   return (
@@ -16,11 +15,9 @@ const App = () => {
       <Navbar1 />
       <Routes>
         {/* Home Route - Should be exact path */}
-        <Route path="/" element={<Home />} />
+        <Route path="/BloodDonation/" element={<Home />} />
         
-        {/* Authentication */}
-        <Route path="/login" element={<AuthForm isLogin={true} />} />
-        <Route path="/signup" element={<AuthForm isLogin={false} />} />
+        
         
         {/* Donor Routes */}
         <Route path="/register" element={<Register />} />
@@ -31,7 +28,7 @@ const App = () => {
         <Route path="/blood-requests" element={<RecentRequests />} />
         
         {/* Informational Routes */}
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/findcenter" element={<FindCenter />} />
 
         
        

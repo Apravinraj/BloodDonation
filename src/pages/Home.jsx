@@ -1,14 +1,18 @@
 import React from 'react';
-import Navbar1 from '../components/Navbar1';
+import { useNavigate } from 'react-router-dom'; // Add this
+import homeImage from '../assets/home.png';
 import './Home.css';
 
 const Home = () => {
+  const navigate = useNavigate(); // Hook to navigate
+
+  const handleFindCenter = () => {
+    navigate('/findcenter'); // Navigate to FindCenter page
+  };
+
   return (
     <>
-      {/* <Navbar1 isAdmin={false} /> */}
-      
       <main className="home-main">
-        {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-content">
             <div className="hero-text">
@@ -18,14 +22,19 @@ const Home = () => {
               </p>
               
               <div className="hero-cta">
-                <button className="cta-button primary">Find a Center</button>
+                <button 
+                  className="cta-button primary" 
+                  onClick={handleFindCenter} // Button click
+                >
+                  Find a Center
+                </button>
                 <button className="cta-button secondary">Learn More</button>
               </div>
             </div>
             
             <div className="hero-image-container">
               <img 
-                src="/src/assets/home.png" 
+                src={homeImage} 
                 alt="Blood donation hero" 
                 className="hero-image"
                 loading="lazy"
@@ -49,7 +58,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
         <section className="benefits-section">
           <h2 className="section-title">Why Donate Blood?</h2>
           
@@ -74,13 +82,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Mobile Floating CTA */}
         <div className="mobile-floating-cta">
           <button className="floating-cta-button">Donate Now</button>
         </div>
       </main>
     </>
   );
-}
+};
 
 export default Home;

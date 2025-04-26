@@ -20,7 +20,7 @@ const Navbar1 = () => {
           <span className="bar"></span>
         </div>
         <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <NavLink to="/" className="nav-link" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/BloodDonation" className="nav-link" onClick={closeMenu}>Home</NavLink>
           <NavLink to="/register" className="nav-link" onClick={closeMenu}>Register</NavLink>
           <NavLink to="/find-donors" className="nav-link" onClick={closeMenu}>Find Donors</NavLink>
           <NavLink to="/request-blood" className="nav-link" onClick={closeMenu}>Request Blood</NavLink>

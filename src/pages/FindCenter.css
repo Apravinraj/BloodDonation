@@ -1,0 +1,136 @@
+.find-center-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    color: #e63946;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .error-message {
+    background-color: #ffeeee;
+    color: #e63946;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #f8f9fa;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #e63946;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .blood-banks-list h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .banks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .bank-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .bank-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bank-card h3 {
+    color: #e63946;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bank-card .address {
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bank-card .contact,
+  .bank-card .hours {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .view-on-map-btn,
+  .directions-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .view-on-map-btn:hover,
+  .directions-btn:hover {
+    background-color: #c1121f;
+  }
+  
+  .info-window {
+    padding: 0.5rem;
+  }
+  
+  .info-window h3 {
+    color: #e63946;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-window p {
+    margin-bottom: 0.3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .banks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
